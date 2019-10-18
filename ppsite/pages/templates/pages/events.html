@@ -1,8 +1,96 @@
-{% extends 'common/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
 
-{% block content %}
-    <Title>Product Backlog</Title>
-    <h1>Test</h1>
-    {{ request.user }}
-    <p>this is a template</p>
-{% endblock %}
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+#home {
+    width: 70px;
+    background-color: grey;
+    border-radius: 10%;
+}
+</style>
+
+<meta name="viewport" content="width=device-20%, initial-scale=0.5">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <button id='home'>Home</button>
+<h2 style="text-align:center">Events</h2>
+
+<div class="card">
+  <h1>Stravinsky's Rite of Spring - Berlin Philharmonic </h1>
+  <p class="title">June 2 2019</p>
+  <p class="title">Genre: 56</p>
+  <p class="title">Response rate: 98%</p>
+  <p class="title">Capacity filled: 91%</p>
+  <p class="title">Successful Invitations: 60%</p>
+  <p class="title">Venue: XYZ Opera House</p>
+  <div class="container">
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse1">Top Donations:</a>
+          </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+          <div class="panel-body">John Smith: $10,000</div>
+          <div class="panel-footer">Lee Ka Shing: $8,000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="title">Genres of Interest:</p>
+  <img src="{% static 'pages/events_fig1.jpeg' %}" alt="fig1" style="width:70%">
+
+    
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+</body>
+</html>
